@@ -39,6 +39,43 @@ class ViewController: UIViewController {
         }
     }
     
+    func state_change0(sender: DigitalInput, state: Bool) {
+        do{
+
+            if (state == true){
+                print("Button 0 Pressed")
+                try ledArray[0].setState(true)
+            }
+            else {
+                print("Button 0 Not Pressed")
+                try ledArray[0].setState(false)
+            }
+        } catch let err as PhidgetError {
+            print("Phidget Error" + err.description)
+        } catch {
+            //catch other errors here
+        }
+    }
+    
+    func state_change1(sender: DigitalInput, state: Bool) {
+        do{
+            
+            if (state == true){
+                print("Button 0 Pressed")
+                try ledArray[1].setState(true)
+            }
+            else {
+                print("Button 0 Not Pressed")
+                try ledArray[1].setState(false)
+            }
+        } catch let err as PhidgetError {
+            print("Phidget Error" + err.description)
+        } catch {
+            //catch other errors here
+        }
+    }
+
+    
 
 
     override func viewDidLoad() {
@@ -51,6 +88,8 @@ class ViewController: UIViewController {
                 try buttonArray[i].setDeviceSerialNumber(528057)
                 try buttonArray[i].setHubPort(i)
                 try buttonArray[i].setIsHubPortDevice(true)
+                let _ = buttonArray[i].stateChange.addHandler(state_change0)
+                let _ = buttonArray[i].stateChange.addHandler(state_change1)
                 let _ = buttonArray[i].attach.addHandler(attach_handler)
                 try buttonArray[i].open()
             }
