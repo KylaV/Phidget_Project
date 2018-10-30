@@ -1,0 +1,933 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01A72287B5A2DDA60D57B088E8E372CA /* MotorPositionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6A980F3B82CCD310FAA83D4B2131C6 /* MotorPositionController.swift */; };
+		01CFD56C93106CD137A9407FDCD8CE57 /* CurrentInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C3E2843533D63BAD9EE73B8880161 /* CurrentInput.swift */; };
+		02BC29BBE52FAD6C00CC8A909EC704CF /* RCServo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E2056F491969BEF34CB90D1B295B4D /* RCServo.swift */; };
+		0A73BF89B361792F23B0CA3085930C6B /* AsyncCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2534045ED6E9B83304253A993B6F984 /* AsyncCallback.swift */; };
+		0B2D8FA960467FB4FBBEF7D0664C3F90 /* Phidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD3821F22F60C4BCBEE4C5C9B9076C /* Phidget.swift */; };
+		0D1C686256A7A374329442477AC72334 /* Gyroscope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D901C074EE4ABE57C212E93AA98646 /* Gyroscope.swift */; };
+		0ED4A36144A52EAEB7158DA62BF0120D /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D7F2133C36BAA034E83D739764EE28 /* Types.swift */; };
+		1087CF3493E5254150359E3663B6B50B /* BLDCMotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EC4345DDE6001A04621FBA9C190989 /* BLDCMotor.swift */; };
+		10C0334051D33669B043271559A46EF3 /* Hub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AFC33EFE0DECD9724205E710EA1820 /* Hub.swift */; };
+		13A06CC22938218F76C75B22F77E99FF /* DistanceSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473AB3989CEE56EABA3849FA643EAAC6 /* DistanceSensorBase.swift */; };
+		15FDE5B5C24F15149A1207992794FB2F /* PowerGuard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86877477F6DE6388C24BA0883BC13F73 /* PowerGuard.swift */; };
+		2590EEF8EBC3B0D3A11BC5C7499F71B7 /* TemperatureSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1BCB559F375114F8311FED99F5BD96A /* TemperatureSensorBase.swift */; };
+		2D10981DCCA771438E6E52DB29B5A1A7 /* LCDBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7172F4CC5639D1F8329F855887EE59C /* LCDBase.swift */; };
+		2D1A0CE2C083C508C86C9069552E3602 /* LightSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3BCFBB4CDE3F75C93053B7EA74A336 /* LightSensor.swift */; };
+		35C9ACFFCB2811EC360C2DCF297B1D35 /* VoltageRatioInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F79556EF7E6AA2B5F04888D552D2F /* VoltageRatioInput.swift */; };
+		3874E4B235E97718D335618BCE2F6717 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438DA5DA5278DC971F74910A4A2A69F /* Event.swift */; };
+		38EADC221ACF95D903BEECEC082ABD7E /* IRBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219372A4670FE4B8B27902D7D6FCDEED /* IRBase.swift */; };
+		3A4B01C1F2B69002008AAD72DB31C602 /* BLDCMotorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BFBC51F75A23D7321DA96C8AEE0D058 /* BLDCMotorBase.swift */; };
+		3B094DE42C527A0C9C56F7E8366BFED3 /* Accelerometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702BD9EC74C2FC4E81B73D8FD2E3ACFB /* Accelerometer.swift */; };
+		46724B8878AA4421837A61DD15AD51CF /* PHSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78443C1EC504F114C1132B59774126C /* PHSensorBase.swift */; };
+		4B8A280247A015EDDBFF383740E3F769 /* RCServoBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA66AB07C00A6B41F5435CE7AFD79E78 /* RCServoBase.swift */; };
+		4BDB7CA150F642BD756C206D44EAC022 /* GPSBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9ECACDA35DD135673EF63CA02D78DD /* GPSBase.swift */; };
+		4BE31618F557F50C3A20BC5A3E36336F /* FrequencyCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409AD47657F23A4C224F2E3F33E84D90 /* FrequencyCounter.swift */; };
+		4C82E6FD940C2D32EA94A25EB7A8AAF6 /* IR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB162A62A126153440298F0F433B6C3 /* IR.swift */; };
+		527A14D6D0BD9C41EE2D0F03589B3E95 /* LCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A22AE0A4212AC0050DBF447E123E04 /* LCD.swift */; };
+		52ED6D5EC2A25EC39B21BCF487AC93AF /* LogBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5231BEF2594B8C09B30FE20D4F0B591D /* LogBase.swift */; };
+		59B60BB1E12DCE64FDC7DD54BC8EBE4F /* VoltageOutputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65310AB5EEF41127968909108488CFD3 /* VoltageOutputBase.swift */; };
+		5DC5B45E4B4F7656A55FE15749BF8BBD /* StepperBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3841FD2113EE6F767DFCDCB47492EAF2 /* StepperBase.swift */; };
+		5F03B33A916C8498B4CF9CC778494BBB /* Pods-Phidget_Project-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FB0BC2ED6DBC6EE4B9C211AB2E2AA0B /* Pods-Phidget_Project-dummy.m */; };
+		60D967CEFDFEBF4886B50A9367446812 /* DistanceSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B4E493E7C9B47E3B8B0D4F35CFA840 /* DistanceSensor.swift */; };
+		6292C61049B71C68F6F2BF1247DB2DEE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		668FAE0109F888848AF661317DB50282 /* MotorPositionControllerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEF1CD8886F455AA923523F75B95FDF /* MotorPositionControllerBase.swift */; };
+		674B753EB48DAC0CD44A86BA2AEB5EE1 /* LightSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A496849DA0B13EE0E7E1D6BC1C091268 /* LightSensorBase.swift */; };
+		69B0DF8494AB4E1BE980D4DF3B18D5D2 /* ResistanceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F62429C0454B5194BB28EB9B8819C0 /* ResistanceInput.swift */; };
+		6D3FA1DB42E43197874A11A20BC553B0 /* Encoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FBF4DC296291E02252EEF83572C88B8 /* Encoder.swift */; };
+		6D91904FF1A1BAA69DDDFC7080E5B926 /* PhidgetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F57A779DF87B92CCC73A5A3809E099F /* PhidgetError.swift */; };
+		72FEE5CE6C60310444C842AB4D93BCF1 /* Phidget22Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 90698CBC7F89A0936E3E90B60BF4EDEA /* Phidget22Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76000280F2AE844D3226F46078522E53 /* FrequencyCounterBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4862889BE53560617D61F7FD5FB873 /* FrequencyCounterBase.swift */; };
+		7756FE2B5783FED60ED6AF82BC31C39E /* ManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F4BAF67EFD7A99EEBD4720C2FD0607 /* ManagerBase.swift */; };
+		78C36831C16E39EAAF577D23BD868179 /* SoundSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36776BF0F9539FF9ABB56F7680FD61E1 /* SoundSensorBase.swift */; };
+		7E797C70B1D20907186478F4881EBDF2 /* PowerGuardBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEF614605920E67E5875C9FF123E307 /* PowerGuardBase.swift */; };
+		800B4C9C55D66587AC1FB86F541F3AC5 /* NetBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13411BF9BEA51D3D12810575A66BB2C /* NetBase.swift */; };
+		83BA16D7AD3EFD8E08AE25C4321E78E7 /* Stepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC8E900E26C88BE28491A8D26E0F4183 /* Stepper.swift */; };
+		85A51D29A0DA35095433740FAA4A14B0 /* SoundSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD7ED3DDF3BEEF20842ED8946268511 /* SoundSensor.swift */; };
+		85DAF23CE63C30F9D103EE97D7FD02DE /* PressureSensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42C01C2EA842D0135D59742AE9EA5B9 /* PressureSensorBase.swift */; };
+		8679CD10B9D4F728C5B64A9509AF936F /* DictionaryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF21938E541A2683CB3B122611D1933 /* DictionaryBase.swift */; };
+		86B3C143C6D35BDE916E227F988DB8C4 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218C387FF302B8EDB3633CF484042C62 /* Dictionary.swift */; };
+		8B5E4D51F6BB5373DDF9B252642E3F08 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E3F92D9129F697BAF01DAD1EE2067F /* Log.swift */; };
+		8D396A33AB7071E87266E95465706A2D /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C1F83593F39B01EC73447B8FBA0B69 /* Net.swift */; };
+		8E1F28D070218BB067B4C1160DCD20B1 /* PHSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7603B5AADB3F8B13C8560E2F9D425FF /* PHSensor.swift */; };
+		8E66747FB608D853AA3AF5267DA243BB /* GPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669005E50D107FC7840573E8B4E073BD /* GPS.swift */; };
+		93655B22433ECEE81BB0C5B3BEA7C3F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		9B5B4D6CDC13B6A59C67CE4968FE9D7A /* HubBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E527951A87A543F0FC1BFA39701233A /* HubBase.swift */; };
+		9C5A34C3C54E2DD8C059CE2C6ABEBE29 /* DCMotorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE4413957F874CF6D47C1C55ADF3384 /* DCMotorBase.swift */; };
+		A973D2E47B6BA1298F7371CE032317A6 /* SpatialBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECD8C56776E16A8E0E8522DB0B512CCB /* SpatialBase.swift */; };
+		AA95C36ABCA73EBA5116E333592AF31C /* Magnetometer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E147B7E73C33FE7C0593D20E93CE3 /* Magnetometer.swift */; };
+		B54586968C34A5150DF905A423261CF5 /* Spatial.swift in Sources */ = {isa = PBXBuildFile; fileRef = D153C9BA8D95EA1D9FBF8813F905067E /* Spatial.swift */; };
+		B594507018D182F5D30E2367F77D9707 /* RFIDBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB96020DFF8A69D47857EC6071515125 /* RFIDBase.swift */; };
+		C19C03A01C5C3D8705FA27E0633D8945 /* ResistanceInputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050822EB1ADE247800625230896A7CD6 /* ResistanceInputBase.swift */; };
+		C21E1CB05A845568FA48CC5CA3345147 /* DigitalInputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C135A5B7AFE07F1B471FDEE5AE16E467 /* DigitalInputBase.swift */; };
+		C5C5B018B9C03F4107159B49024CDA47 /* DCMotor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F2B6D2238344F9B29754CBE591B00C /* DCMotor.swift */; };
+		C6C7997B3F3A9ED652FA71B9A172CA25 /* VoltageInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD0B200A8135D40BB8A8BEC6C4244D98 /* VoltageInput.swift */; };
+		C7C8EA9C373E579759380464004F220E /* AccelerometerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC4D54FE6025E90F88724AA0ABE1CA6 /* AccelerometerBase.swift */; };
+		C80F82AC1D139A676BB13C58DD6D53EA /* PhidgetBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD01B7ACD43D08E2015D6DE7FFCC31 /* PhidgetBase.swift */; };
+		CEE843D4D4C1A540F70A62A36B851F36 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8A5E424935D836B9768E13BAF03062 /* Manager.swift */; };
+		D0764A8ABB7FB019A29B07C03F5E4F4C /* CurrentInputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417FB86250D3C26A65AEFA9360F2C322 /* CurrentInputBase.swift */; };
+		D2E2488EF6508D9936CD8B8A40866134 /* HumiditySensorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F0187120EE127FD2CFC0D19DCF95BB /* HumiditySensorBase.swift */; };
+		D57F286AD255838D95AE7053F15C99BA /* EncoderBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE816F6E8C1B16087465A1F6D47DD3D /* EncoderBase.swift */; };
+		D66F7F1166415E47B5AC9D5E6B341F33 /* VoltageInputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB65A30D82803F3340122EE97929698 /* VoltageInputBase.swift */; };
+		D716693A54019951B89B9F3C0B0BCEAC /* DigitalInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDA8EF94A276B7A878A8C10378B98BD /* DigitalInput.swift */; };
+		DBEC641C92C8C05F1F15C51984AF96CE /* GyroscopeBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3689C99F34AA825A7D7221A4CB578088 /* GyroscopeBase.swift */; };
+		DBF48189D10280AD89DE7C1064FB63B3 /* Pods-Phidget_Project-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F8669D26DEB74391F8EC6DFD720E9AF /* Pods-Phidget_Project-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE65315ADBF2CD597174FAA7CD458E7B /* VoltageRatioInputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4380530F175A6F03B6E4CA5A5C1E71E6 /* VoltageRatioInputBase.swift */; };
+		E17E258BDA6ABF27964041803E677C48 /* TemperatureSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1777585DBB9C6A40E6B62761CF40F45 /* TemperatureSensor.swift */; };
+		E2BC62C2CA51699E3E884729E93EE1E5 /* phidget22.h in Headers */ = {isa = PBXBuildFile; fileRef = 97A639AABD7EAA1507BC3D7F79C04C6A /* phidget22.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		E4F112B70801969F928343B845E7A51D /* DigitalOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E529A95D706134A9A01F34BF451FCA10 /* DigitalOutput.swift */; };
+		E56C3A9D95BCBF2913DE85483CECB833 /* RFID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0848E65DF1DE82117EA7D53461008C /* RFID.swift */; };
+		E5890B6033D14A0438CB67D81C2FA7E7 /* VoltageOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C977712437B35459EC8DC65AC05F143 /* VoltageOutput.swift */; };
+		EA4238BDCEC779B0F8797656BA630C8E /* HumiditySensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF73010698BAE8A8ABAEF10A38D8BF /* HumiditySensor.swift */; };
+		EAD40B82470E4E76FB3436A9C857D729 /* MagnetometerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7178A0136AA9ED128C3D1639168A32B3 /* MagnetometerBase.swift */; };
+		ECF623FE39A9F7E50BB6B14341326047 /* CapacitiveTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A4D19DFEC09818C5F2773D8B432369 /* CapacitiveTouch.swift */; };
+		F58EA736FE4A9A6AC3249B28869362C8 /* PressureSensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511B9A5A2C7041E2B17FD1D2E349FE3F /* PressureSensor.swift */; };
+		F68199D99432744533E527C77143E083 /* CapacitiveTouchBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A66FDB003AB3B32356D9D2CAB87FF46 /* CapacitiveTouchBase.swift */; };
+		FA6CA916672ACBCE527724801F320949 /* DigitalOutputBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E240D7B15DFBA422702E1F7750BF2B9 /* DigitalOutputBase.swift */; };
+		FE14631051CC17F36D71747FEDE3990D /* Phidget22Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A0929474F255365EC5FD83BCC9863FE5 /* Phidget22Swift-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8546ABB33CDFE34C814BA8920E6E877E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55B0D5869F76EB974AF1C4DEBB5E6E07;
+			remoteInfo = Phidget22Swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		050822EB1ADE247800625230896A7CD6 /* ResistanceInputBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResistanceInputBase.swift; path = src/ResistanceInputBase.swift; sourceTree = "<group>"; };
+		05A28E9E90102031F1CDF03876EC6298 /* Phidget22Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Phidget22Swift.framework; path = Phidget22Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BE816F6E8C1B16087465A1F6D47DD3D /* EncoderBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EncoderBase.swift; path = src/EncoderBase.swift; sourceTree = "<group>"; };
+		0C0848E65DF1DE82117EA7D53461008C /* RFID.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RFID.swift; path = src/RFID.swift; sourceTree = "<group>"; };
+		0CEF614605920E67E5875C9FF123E307 /* PowerGuardBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PowerGuardBase.swift; path = src/PowerGuardBase.swift; sourceTree = "<group>"; };
+		0FB0BC2ED6DBC6EE4B9C211AB2E2AA0B /* Pods-Phidget_Project-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Phidget_Project-dummy.m"; sourceTree = "<group>"; };
+		17BD01B7ACD43D08E2015D6DE7FFCC31 /* PhidgetBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhidgetBase.swift; path = src/PhidgetBase.swift; sourceTree = "<group>"; };
+		17D7F2133C36BAA034E83D739764EE28 /* Types.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Types.swift; path = src/Types.swift; sourceTree = "<group>"; };
+		1ED5E960F3A194EB910C9670EBC821A7 /* Pods-Phidget_Project.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Phidget_Project.modulemap"; sourceTree = "<group>"; };
+		218C387FF302B8EDB3633CF484042C62 /* Dictionary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary.swift; path = src/Dictionary.swift; sourceTree = "<group>"; };
+		219372A4670FE4B8B27902D7D6FCDEED /* IRBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IRBase.swift; path = src/IRBase.swift; sourceTree = "<group>"; };
+		262E5BAA69BADC039AA38E5B71279066 /* Pods-Phidget_Project-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Phidget_Project-acknowledgements.markdown"; sourceTree = "<group>"; };
+		27AFC33EFE0DECD9724205E710EA1820 /* Hub.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Hub.swift; path = src/Hub.swift; sourceTree = "<group>"; };
+		28B4E493E7C9B47E3B8B0D4F35CFA840 /* DistanceSensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistanceSensor.swift; path = src/DistanceSensor.swift; sourceTree = "<group>"; };
+		2C9ECACDA35DD135673EF63CA02D78DD /* GPSBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPSBase.swift; path = src/GPSBase.swift; sourceTree = "<group>"; };
+		2DB162A62A126153440298F0F433B6C3 /* IR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IR.swift; path = src/IR.swift; sourceTree = "<group>"; };
+		36776BF0F9539FF9ABB56F7680FD61E1 /* SoundSensorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundSensorBase.swift; path = src/SoundSensorBase.swift; sourceTree = "<group>"; };
+		3689C99F34AA825A7D7221A4CB578088 /* GyroscopeBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GyroscopeBase.swift; path = src/GyroscopeBase.swift; sourceTree = "<group>"; };
+		3841FD2113EE6F767DFCDCB47492EAF2 /* StepperBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StepperBase.swift; path = src/StepperBase.swift; sourceTree = "<group>"; };
+		3A4862889BE53560617D61F7FD5FB873 /* FrequencyCounterBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrequencyCounterBase.swift; path = src/FrequencyCounterBase.swift; sourceTree = "<group>"; };
+		3C6A980F3B82CCD310FAA83D4B2131C6 /* MotorPositionController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MotorPositionController.swift; path = src/MotorPositionController.swift; sourceTree = "<group>"; };
+		3C8A547435FF4517A6B0D6FA9C2A35B0 /* Pods_Phidget_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Phidget_Project.framework; path = "Pods-Phidget_Project.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		409AD47657F23A4C224F2E3F33E84D90 /* FrequencyCounter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FrequencyCounter.swift; path = src/FrequencyCounter.swift; sourceTree = "<group>"; };
+		417FB86250D3C26A65AEFA9360F2C322 /* CurrentInputBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrentInputBase.swift; path = src/CurrentInputBase.swift; sourceTree = "<group>"; };
+		4380530F175A6F03B6E4CA5A5C1E71E6 /* VoltageRatioInputBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoltageRatioInputBase.swift; path = src/VoltageRatioInputBase.swift; sourceTree = "<group>"; };
+		44D901C074EE4ABE57C212E93AA98646 /* Gyroscope.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Gyroscope.swift; path = src/Gyroscope.swift; sourceTree = "<group>"; };
+		473AB3989CEE56EABA3849FA643EAAC6 /* DistanceSensorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DistanceSensorBase.swift; path = src/DistanceSensorBase.swift; sourceTree = "<group>"; };
+		48EC4345DDE6001A04621FBA9C190989 /* BLDCMotor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLDCMotor.swift; path = src/BLDCMotor.swift; sourceTree = "<group>"; };
+		511B9A5A2C7041E2B17FD1D2E349FE3F /* PressureSensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PressureSensor.swift; path = src/PressureSensor.swift; sourceTree = "<group>"; };
+		5231BEF2594B8C09B30FE20D4F0B591D /* LogBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogBase.swift; path = src/LogBase.swift; sourceTree = "<group>"; };
+		525E147B7E73C33FE7C0593D20E93CE3 /* Magnetometer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Magnetometer.swift; path = src/Magnetometer.swift; sourceTree = "<group>"; };
+		52DB0F71BF4A5042E673CD82AEFCF715 /* Pods-Phidget_Project-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Phidget_Project-acknowledgements.plist"; sourceTree = "<group>"; };
+		539C3E2843533D63BAD9EE73B8880161 /* CurrentInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurrentInput.swift; path = src/CurrentInput.swift; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5BE4413957F874CF6D47C1C55ADF3384 /* DCMotorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DCMotorBase.swift; path = src/DCMotorBase.swift; sourceTree = "<group>"; };
+		5BFBC51F75A23D7321DA96C8AEE0D058 /* BLDCMotorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BLDCMotorBase.swift; path = src/BLDCMotorBase.swift; sourceTree = "<group>"; };
+		5E240D7B15DFBA422702E1F7750BF2B9 /* DigitalOutputBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigitalOutputBase.swift; path = src/DigitalOutputBase.swift; sourceTree = "<group>"; };
+		5E6CD07B2A867766EC1B2E0777E5878D /* Pods-Phidget_Project.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Phidget_Project.debug.xcconfig"; sourceTree = "<group>"; };
+		5E8A5E424935D836B9768E13BAF03062 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = src/Manager.swift; sourceTree = "<group>"; };
+		64AAB3D3CF286EE916705DF7FC0E4CC6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64C1F83593F39B01EC73447B8FBA0B69 /* Net.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Net.swift; path = src/Net.swift; sourceTree = "<group>"; };
+		65310AB5EEF41127968909108488CFD3 /* VoltageOutputBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoltageOutputBase.swift; path = src/VoltageOutputBase.swift; sourceTree = "<group>"; };
+		669005E50D107FC7840573E8B4E073BD /* GPS.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GPS.swift; path = src/GPS.swift; sourceTree = "<group>"; };
+		6F57A779DF87B92CCC73A5A3809E099F /* PhidgetError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PhidgetError.swift; path = src/PhidgetError.swift; sourceTree = "<group>"; };
+		6F8669D26DEB74391F8EC6DFD720E9AF /* Pods-Phidget_Project-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Phidget_Project-umbrella.h"; sourceTree = "<group>"; };
+		702BD9EC74C2FC4E81B73D8FD2E3ACFB /* Accelerometer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Accelerometer.swift; path = src/Accelerometer.swift; sourceTree = "<group>"; };
+		7178A0136AA9ED128C3D1639168A32B3 /* MagnetometerBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MagnetometerBase.swift; path = src/MagnetometerBase.swift; sourceTree = "<group>"; };
+		71E3F92D9129F697BAF01DAD1EE2067F /* Log.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Log.swift; path = src/Log.swift; sourceTree = "<group>"; };
+		74641474F2638864B5166927A2AD875C /* Phidget22Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Phidget22Swift.modulemap; sourceTree = "<group>"; };
+		75A4D19DFEC09818C5F2773D8B432369 /* CapacitiveTouch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CapacitiveTouch.swift; path = src/CapacitiveTouch.swift; sourceTree = "<group>"; };
+		7A79D5A22A04B8F64B5D2C5CA2BD3D4A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86877477F6DE6388C24BA0883BC13F73 /* PowerGuard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PowerGuard.swift; path = src/PowerGuard.swift; sourceTree = "<group>"; };
+		8A66FDB003AB3B32356D9D2CAB87FF46 /* CapacitiveTouchBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CapacitiveTouchBase.swift; path = src/CapacitiveTouchBase.swift; sourceTree = "<group>"; };
+		8DD7ED3DDF3BEEF20842ED8946268511 /* SoundSensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SoundSensor.swift; path = src/SoundSensor.swift; sourceTree = "<group>"; };
+		8DEF1CD8886F455AA923523F75B95FDF /* MotorPositionControllerBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MotorPositionControllerBase.swift; path = src/MotorPositionControllerBase.swift; sourceTree = "<group>"; };
+		8E527951A87A543F0FC1BFA39701233A /* HubBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HubBase.swift; path = src/HubBase.swift; sourceTree = "<group>"; };
+		90698CBC7F89A0936E3E90B60BF4EDEA /* Phidget22Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Phidget22Swift-umbrella.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9438DA5DA5278DC971F74910A4A2A69F /* Event.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Event.swift; path = src/Event.swift; sourceTree = "<group>"; };
+		97A639AABD7EAA1507BC3D7F79C04C6A /* phidget22.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = phidget22.h; path = libphidget22/phidget22.h; sourceTree = "<group>"; };
+		9AF21938E541A2683CB3B122611D1933 /* DictionaryBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryBase.swift; path = src/DictionaryBase.swift; sourceTree = "<group>"; };
+		9BB65A30D82803F3340122EE97929698 /* VoltageInputBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoltageInputBase.swift; path = src/VoltageInputBase.swift; sourceTree = "<group>"; };
+		9C977712437B35459EC8DC65AC05F143 /* VoltageOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoltageOutput.swift; path = src/VoltageOutput.swift; sourceTree = "<group>"; };
+		9FBF4DC296291E02252EEF83572C88B8 /* Encoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Encoder.swift; path = src/Encoder.swift; sourceTree = "<group>"; };
+		A0929474F255365EC5FD83BCC9863FE5 /* Phidget22Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Phidget22Swift-dummy.m"; sourceTree = "<group>"; };
+		A1BCB559F375114F8311FED99F5BD96A /* TemperatureSensorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TemperatureSensorBase.swift; path = src/TemperatureSensorBase.swift; sourceTree = "<group>"; };
+		A2534045ED6E9B83304253A993B6F984 /* AsyncCallback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AsyncCallback.swift; path = src/AsyncCallback.swift; sourceTree = "<group>"; };
+		A496849DA0B13EE0E7E1D6BC1C091268 /* LightSensorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LightSensorBase.swift; path = src/LightSensorBase.swift; sourceTree = "<group>"; };
+		AB96020DFF8A69D47857EC6071515125 /* RFIDBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RFIDBase.swift; path = src/RFIDBase.swift; sourceTree = "<group>"; };
+		ABDA8EF94A276B7A878A8C10378B98BD /* DigitalInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigitalInput.swift; path = src/DigitalInput.swift; sourceTree = "<group>"; };
+		AD0B200A8135D40BB8A8BEC6C4244D98 /* VoltageInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoltageInput.swift; path = src/VoltageInput.swift; sourceTree = "<group>"; };
+		ADA4723510CA26AC64454CAED7611200 /* Pods-Phidget_Project.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Phidget_Project.release.xcconfig"; sourceTree = "<group>"; };
+		AF3BCFBB4CDE3F75C93053B7EA74A336 /* LightSensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LightSensor.swift; path = src/LightSensor.swift; sourceTree = "<group>"; };
+		B0E2056F491969BEF34CB90D1B295B4D /* RCServo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RCServo.swift; path = src/RCServo.swift; sourceTree = "<group>"; };
+		B13411BF9BEA51D3D12810575A66BB2C /* NetBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetBase.swift; path = src/NetBase.swift; sourceTree = "<group>"; };
+		B17F75B4411B4DE2D0663DC676BE92B6 /* libphidget22.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libphidget22.a; path = libphidget22/libphidget22.a; sourceTree = "<group>"; };
+		B78443C1EC504F114C1132B59774126C /* PHSensorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PHSensorBase.swift; path = src/PHSensorBase.swift; sourceTree = "<group>"; };
+		BA66AB07C00A6B41F5435CE7AFD79E78 /* RCServoBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RCServoBase.swift; path = src/RCServoBase.swift; sourceTree = "<group>"; };
+		BCC4D54FE6025E90F88724AA0ABE1CA6 /* AccelerometerBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AccelerometerBase.swift; path = src/AccelerometerBase.swift; sourceTree = "<group>"; };
+		C135A5B7AFE07F1B471FDEE5AE16E467 /* DigitalInputBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigitalInputBase.swift; path = src/DigitalInputBase.swift; sourceTree = "<group>"; };
+		C1777585DBB9C6A40E6B62761CF40F45 /* TemperatureSensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TemperatureSensor.swift; path = src/TemperatureSensor.swift; sourceTree = "<group>"; };
+		C2CD3821F22F60C4BCBEE4C5C9B9076C /* Phidget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Phidget.swift; path = src/Phidget.swift; sourceTree = "<group>"; };
+		C31F79556EF7E6AA2B5F04888D552D2F /* VoltageRatioInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VoltageRatioInput.swift; path = src/VoltageRatioInput.swift; sourceTree = "<group>"; };
+		C7172F4CC5639D1F8329F855887EE59C /* LCDBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LCDBase.swift; path = src/LCDBase.swift; sourceTree = "<group>"; };
+		C7603B5AADB3F8B13C8560E2F9D425FF /* PHSensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PHSensor.swift; path = src/PHSensor.swift; sourceTree = "<group>"; };
+		C7F0187120EE127FD2CFC0D19DCF95BB /* HumiditySensorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HumiditySensorBase.swift; path = src/HumiditySensorBase.swift; sourceTree = "<group>"; };
+		D0A22AE0A4212AC0050DBF447E123E04 /* LCD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LCD.swift; path = src/LCD.swift; sourceTree = "<group>"; };
+		D0DF73010698BAE8A8ABAEF10A38D8BF /* HumiditySensor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HumiditySensor.swift; path = src/HumiditySensor.swift; sourceTree = "<group>"; };
+		D153C9BA8D95EA1D9FBF8813F905067E /* Spatial.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Spatial.swift; path = src/Spatial.swift; sourceTree = "<group>"; };
+		D1F4BAF67EFD7A99EEBD4720C2FD0607 /* ManagerBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ManagerBase.swift; path = src/ManagerBase.swift; sourceTree = "<group>"; };
+		D1F62429C0454B5194BB28EB9B8819C0 /* ResistanceInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResistanceInput.swift; path = src/ResistanceInput.swift; sourceTree = "<group>"; };
+		D42C01C2EA842D0135D59742AE9EA5B9 /* PressureSensorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PressureSensorBase.swift; path = src/PressureSensorBase.swift; sourceTree = "<group>"; };
+		DE22264B985ECF15848A74CB1B340564 /* Pods-Phidget_Project-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Phidget_Project-frameworks.sh"; sourceTree = "<group>"; };
+		E0CCBF01B7E7E87A401E17B51DB534A8 /* Phidget22Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Phidget22Swift-prefix.pch"; sourceTree = "<group>"; };
+		E12AB7B89AD9F71BA9B5A97E4C03054A /* Pods-Phidget_Project-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Phidget_Project-resources.sh"; sourceTree = "<group>"; };
+		E227AAE4181917B7A0D03FAB3D4D71A3 /* Phidget22Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Phidget22Swift.xcconfig; sourceTree = "<group>"; };
+		E529A95D706134A9A01F34BF451FCA10 /* DigitalOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigitalOutput.swift; path = src/DigitalOutput.swift; sourceTree = "<group>"; };
+		EC8E900E26C88BE28491A8D26E0F4183 /* Stepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stepper.swift; path = src/Stepper.swift; sourceTree = "<group>"; };
+		ECD8C56776E16A8E0E8522DB0B512CCB /* SpatialBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SpatialBase.swift; path = src/SpatialBase.swift; sourceTree = "<group>"; };
+		F2F2B6D2238344F9B29754CBE591B00C /* DCMotor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DCMotor.swift; path = src/DCMotor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		023DDC79356A2EC1EBE0F699F3DC5343 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6292C61049B71C68F6F2BF1247DB2DEE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49ADA9CDCEE1AF681F8F231FEA19B39C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93655B22433ECEE81BB0C5B3BEA7C3F7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F05FD1786F4A7ECD64F256260CD70F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05A28E9E90102031F1CDF03876EC6298 /* Phidget22Swift.framework */,
+				3C8A547435FF4517A6B0D6FA9C2A35B0 /* Pods_Phidget_Project.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		64AB5E5B803EDC550374AD7B7FBB07F6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7A79D5A22A04B8F64B5D2C5CA2BD3D4A /* Info.plist */,
+				74641474F2638864B5166927A2AD875C /* Phidget22Swift.modulemap */,
+				E227AAE4181917B7A0D03FAB3D4D71A3 /* Phidget22Swift.xcconfig */,
+				A0929474F255365EC5FD83BCC9863FE5 /* Phidget22Swift-dummy.m */,
+				E0CCBF01B7E7E87A401E17B51DB534A8 /* Phidget22Swift-prefix.pch */,
+				90698CBC7F89A0936E3E90B60BF4EDEA /* Phidget22Swift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Phidget22Swift";
+			sourceTree = "<group>";
+		};
+		6F9490A59992863F31F6798BF067058F /* Phidget22Swift */ = {
+			isa = PBXGroup;
+			children = (
+				702BD9EC74C2FC4E81B73D8FD2E3ACFB /* Accelerometer.swift */,
+				BCC4D54FE6025E90F88724AA0ABE1CA6 /* AccelerometerBase.swift */,
+				A2534045ED6E9B83304253A993B6F984 /* AsyncCallback.swift */,
+				48EC4345DDE6001A04621FBA9C190989 /* BLDCMotor.swift */,
+				5BFBC51F75A23D7321DA96C8AEE0D058 /* BLDCMotorBase.swift */,
+				75A4D19DFEC09818C5F2773D8B432369 /* CapacitiveTouch.swift */,
+				8A66FDB003AB3B32356D9D2CAB87FF46 /* CapacitiveTouchBase.swift */,
+				539C3E2843533D63BAD9EE73B8880161 /* CurrentInput.swift */,
+				417FB86250D3C26A65AEFA9360F2C322 /* CurrentInputBase.swift */,
+				F2F2B6D2238344F9B29754CBE591B00C /* DCMotor.swift */,
+				5BE4413957F874CF6D47C1C55ADF3384 /* DCMotorBase.swift */,
+				218C387FF302B8EDB3633CF484042C62 /* Dictionary.swift */,
+				9AF21938E541A2683CB3B122611D1933 /* DictionaryBase.swift */,
+				ABDA8EF94A276B7A878A8C10378B98BD /* DigitalInput.swift */,
+				C135A5B7AFE07F1B471FDEE5AE16E467 /* DigitalInputBase.swift */,
+				E529A95D706134A9A01F34BF451FCA10 /* DigitalOutput.swift */,
+				5E240D7B15DFBA422702E1F7750BF2B9 /* DigitalOutputBase.swift */,
+				28B4E493E7C9B47E3B8B0D4F35CFA840 /* DistanceSensor.swift */,
+				473AB3989CEE56EABA3849FA643EAAC6 /* DistanceSensorBase.swift */,
+				9FBF4DC296291E02252EEF83572C88B8 /* Encoder.swift */,
+				0BE816F6E8C1B16087465A1F6D47DD3D /* EncoderBase.swift */,
+				9438DA5DA5278DC971F74910A4A2A69F /* Event.swift */,
+				409AD47657F23A4C224F2E3F33E84D90 /* FrequencyCounter.swift */,
+				3A4862889BE53560617D61F7FD5FB873 /* FrequencyCounterBase.swift */,
+				669005E50D107FC7840573E8B4E073BD /* GPS.swift */,
+				2C9ECACDA35DD135673EF63CA02D78DD /* GPSBase.swift */,
+				44D901C074EE4ABE57C212E93AA98646 /* Gyroscope.swift */,
+				3689C99F34AA825A7D7221A4CB578088 /* GyroscopeBase.swift */,
+				27AFC33EFE0DECD9724205E710EA1820 /* Hub.swift */,
+				8E527951A87A543F0FC1BFA39701233A /* HubBase.swift */,
+				D0DF73010698BAE8A8ABAEF10A38D8BF /* HumiditySensor.swift */,
+				C7F0187120EE127FD2CFC0D19DCF95BB /* HumiditySensorBase.swift */,
+				2DB162A62A126153440298F0F433B6C3 /* IR.swift */,
+				219372A4670FE4B8B27902D7D6FCDEED /* IRBase.swift */,
+				D0A22AE0A4212AC0050DBF447E123E04 /* LCD.swift */,
+				C7172F4CC5639D1F8329F855887EE59C /* LCDBase.swift */,
+				AF3BCFBB4CDE3F75C93053B7EA74A336 /* LightSensor.swift */,
+				A496849DA0B13EE0E7E1D6BC1C091268 /* LightSensorBase.swift */,
+				71E3F92D9129F697BAF01DAD1EE2067F /* Log.swift */,
+				5231BEF2594B8C09B30FE20D4F0B591D /* LogBase.swift */,
+				525E147B7E73C33FE7C0593D20E93CE3 /* Magnetometer.swift */,
+				7178A0136AA9ED128C3D1639168A32B3 /* MagnetometerBase.swift */,
+				5E8A5E424935D836B9768E13BAF03062 /* Manager.swift */,
+				D1F4BAF67EFD7A99EEBD4720C2FD0607 /* ManagerBase.swift */,
+				3C6A980F3B82CCD310FAA83D4B2131C6 /* MotorPositionController.swift */,
+				8DEF1CD8886F455AA923523F75B95FDF /* MotorPositionControllerBase.swift */,
+				64C1F83593F39B01EC73447B8FBA0B69 /* Net.swift */,
+				B13411BF9BEA51D3D12810575A66BB2C /* NetBase.swift */,
+				C2CD3821F22F60C4BCBEE4C5C9B9076C /* Phidget.swift */,
+				97A639AABD7EAA1507BC3D7F79C04C6A /* phidget22.h */,
+				17BD01B7ACD43D08E2015D6DE7FFCC31 /* PhidgetBase.swift */,
+				6F57A779DF87B92CCC73A5A3809E099F /* PhidgetError.swift */,
+				C7603B5AADB3F8B13C8560E2F9D425FF /* PHSensor.swift */,
+				B78443C1EC504F114C1132B59774126C /* PHSensorBase.swift */,
+				86877477F6DE6388C24BA0883BC13F73 /* PowerGuard.swift */,
+				0CEF614605920E67E5875C9FF123E307 /* PowerGuardBase.swift */,
+				511B9A5A2C7041E2B17FD1D2E349FE3F /* PressureSensor.swift */,
+				D42C01C2EA842D0135D59742AE9EA5B9 /* PressureSensorBase.swift */,
+				B0E2056F491969BEF34CB90D1B295B4D /* RCServo.swift */,
+				BA66AB07C00A6B41F5435CE7AFD79E78 /* RCServoBase.swift */,
+				D1F62429C0454B5194BB28EB9B8819C0 /* ResistanceInput.swift */,
+				050822EB1ADE247800625230896A7CD6 /* ResistanceInputBase.swift */,
+				0C0848E65DF1DE82117EA7D53461008C /* RFID.swift */,
+				AB96020DFF8A69D47857EC6071515125 /* RFIDBase.swift */,
+				8DD7ED3DDF3BEEF20842ED8946268511 /* SoundSensor.swift */,
+				36776BF0F9539FF9ABB56F7680FD61E1 /* SoundSensorBase.swift */,
+				D153C9BA8D95EA1D9FBF8813F905067E /* Spatial.swift */,
+				ECD8C56776E16A8E0E8522DB0B512CCB /* SpatialBase.swift */,
+				EC8E900E26C88BE28491A8D26E0F4183 /* Stepper.swift */,
+				3841FD2113EE6F767DFCDCB47492EAF2 /* StepperBase.swift */,
+				C1777585DBB9C6A40E6B62761CF40F45 /* TemperatureSensor.swift */,
+				A1BCB559F375114F8311FED99F5BD96A /* TemperatureSensorBase.swift */,
+				17D7F2133C36BAA034E83D739764EE28 /* Types.swift */,
+				AD0B200A8135D40BB8A8BEC6C4244D98 /* VoltageInput.swift */,
+				9BB65A30D82803F3340122EE97929698 /* VoltageInputBase.swift */,
+				9C977712437B35459EC8DC65AC05F143 /* VoltageOutput.swift */,
+				65310AB5EEF41127968909108488CFD3 /* VoltageOutputBase.swift */,
+				C31F79556EF7E6AA2B5F04888D552D2F /* VoltageRatioInput.swift */,
+				4380530F175A6F03B6E4CA5A5C1E71E6 /* VoltageRatioInputBase.swift */,
+				9336D4D99009E032835321532E466E1A /* Frameworks */,
+				64AB5E5B803EDC550374AD7B7FBB07F6 /* Support Files */,
+			);
+			name = Phidget22Swift;
+			path = Phidget22Swift;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F76543274E03E7268391E76C9C508B5E /* Pods */,
+				2F05FD1786F4A7ECD64F256260CD70F7 /* Products */,
+				BFCF6E6FF23E28C32B9A0498BE9D52D7 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9336D4D99009E032835321532E466E1A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B17F75B4411B4DE2D0663DC676BE92B6 /* libphidget22.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E690EC30C0AF97871C930A034DA9A79 /* Pods-Phidget_Project */ = {
+			isa = PBXGroup;
+			children = (
+				64AAB3D3CF286EE916705DF7FC0E4CC6 /* Info.plist */,
+				1ED5E960F3A194EB910C9670EBC821A7 /* Pods-Phidget_Project.modulemap */,
+				262E5BAA69BADC039AA38E5B71279066 /* Pods-Phidget_Project-acknowledgements.markdown */,
+				52DB0F71BF4A5042E673CD82AEFCF715 /* Pods-Phidget_Project-acknowledgements.plist */,
+				0FB0BC2ED6DBC6EE4B9C211AB2E2AA0B /* Pods-Phidget_Project-dummy.m */,
+				DE22264B985ECF15848A74CB1B340564 /* Pods-Phidget_Project-frameworks.sh */,
+				E12AB7B89AD9F71BA9B5A97E4C03054A /* Pods-Phidget_Project-resources.sh */,
+				6F8669D26DEB74391F8EC6DFD720E9AF /* Pods-Phidget_Project-umbrella.h */,
+				5E6CD07B2A867766EC1B2E0777E5878D /* Pods-Phidget_Project.debug.xcconfig */,
+				ADA4723510CA26AC64454CAED7611200 /* Pods-Phidget_Project.release.xcconfig */,
+			);
+			name = "Pods-Phidget_Project";
+			path = "Target Support Files/Pods-Phidget_Project";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFCF6E6FF23E28C32B9A0498BE9D52D7 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9E690EC30C0AF97871C930A034DA9A79 /* Pods-Phidget_Project */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F76543274E03E7268391E76C9C508B5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F9490A59992863F31F6798BF067058F /* Phidget22Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		19689E5500C1AF5F7B90EE254ABD1285 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBF48189D10280AD89DE7C1064FB63B3 /* Pods-Phidget_Project-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92F748E3D502DA567FA5FAD3421556F7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2BC62C2CA51699E3E884729E93EE1E5 /* phidget22.h in Headers */,
+				72FEE5CE6C60310444C842AB4D93BCF1 /* Phidget22Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		55B0D5869F76EB974AF1C4DEBB5E6E07 /* Phidget22Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9665C42AED62B58402CC522A486DF8A4 /* Build configuration list for PBXNativeTarget "Phidget22Swift" */;
+			buildPhases = (
+				92F748E3D502DA567FA5FAD3421556F7 /* Headers */,
+				1663D70248405798F30F25F82D2396A7 /* Sources */,
+				49ADA9CDCEE1AF681F8F231FEA19B39C /* Frameworks */,
+				D9D6597935FE9D4FEB07157EBC168221 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Phidget22Swift;
+			productName = Phidget22Swift;
+			productReference = 05A28E9E90102031F1CDF03876EC6298 /* Phidget22Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6413B26016C8C4F6F9BAFC7541D264C6 /* Pods-Phidget_Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F181E445DEA243D0D7DADC63CAD2273B /* Build configuration list for PBXNativeTarget "Pods-Phidget_Project" */;
+			buildPhases = (
+				19689E5500C1AF5F7B90EE254ABD1285 /* Headers */,
+				D4784005F61E60AB125F272AD6EC9179 /* Sources */,
+				023DDC79356A2EC1EBE0F699F3DC5343 /* Frameworks */,
+				9DA87E1BAECB8BC371E59020A9792924 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D35225BA40ECE58401F12444B70415A7 /* PBXTargetDependency */,
+			);
+			name = "Pods-Phidget_Project";
+			productName = "Pods-Phidget_Project";
+			productReference = 3C8A547435FF4517A6B0D6FA9C2A35B0 /* Pods_Phidget_Project.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2F05FD1786F4A7ECD64F256260CD70F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55B0D5869F76EB974AF1C4DEBB5E6E07 /* Phidget22Swift */,
+				6413B26016C8C4F6F9BAFC7541D264C6 /* Pods-Phidget_Project */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DA87E1BAECB8BC371E59020A9792924 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9D6597935FE9D4FEB07157EBC168221 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1663D70248405798F30F25F82D2396A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B094DE42C527A0C9C56F7E8366BFED3 /* Accelerometer.swift in Sources */,
+				C7C8EA9C373E579759380464004F220E /* AccelerometerBase.swift in Sources */,
+				0A73BF89B361792F23B0CA3085930C6B /* AsyncCallback.swift in Sources */,
+				1087CF3493E5254150359E3663B6B50B /* BLDCMotor.swift in Sources */,
+				3A4B01C1F2B69002008AAD72DB31C602 /* BLDCMotorBase.swift in Sources */,
+				ECF623FE39A9F7E50BB6B14341326047 /* CapacitiveTouch.swift in Sources */,
+				F68199D99432744533E527C77143E083 /* CapacitiveTouchBase.swift in Sources */,
+				01CFD56C93106CD137A9407FDCD8CE57 /* CurrentInput.swift in Sources */,
+				D0764A8ABB7FB019A29B07C03F5E4F4C /* CurrentInputBase.swift in Sources */,
+				C5C5B018B9C03F4107159B49024CDA47 /* DCMotor.swift in Sources */,
+				9C5A34C3C54E2DD8C059CE2C6ABEBE29 /* DCMotorBase.swift in Sources */,
+				86B3C143C6D35BDE916E227F988DB8C4 /* Dictionary.swift in Sources */,
+				8679CD10B9D4F728C5B64A9509AF936F /* DictionaryBase.swift in Sources */,
+				D716693A54019951B89B9F3C0B0BCEAC /* DigitalInput.swift in Sources */,
+				C21E1CB05A845568FA48CC5CA3345147 /* DigitalInputBase.swift in Sources */,
+				E4F112B70801969F928343B845E7A51D /* DigitalOutput.swift in Sources */,
+				FA6CA916672ACBCE527724801F320949 /* DigitalOutputBase.swift in Sources */,
+				60D967CEFDFEBF4886B50A9367446812 /* DistanceSensor.swift in Sources */,
+				13A06CC22938218F76C75B22F77E99FF /* DistanceSensorBase.swift in Sources */,
+				6D3FA1DB42E43197874A11A20BC553B0 /* Encoder.swift in Sources */,
+				D57F286AD255838D95AE7053F15C99BA /* EncoderBase.swift in Sources */,
+				3874E4B235E97718D335618BCE2F6717 /* Event.swift in Sources */,
+				4BE31618F557F50C3A20BC5A3E36336F /* FrequencyCounter.swift in Sources */,
+				76000280F2AE844D3226F46078522E53 /* FrequencyCounterBase.swift in Sources */,
+				8E66747FB608D853AA3AF5267DA243BB /* GPS.swift in Sources */,
+				4BDB7CA150F642BD756C206D44EAC022 /* GPSBase.swift in Sources */,
+				0D1C686256A7A374329442477AC72334 /* Gyroscope.swift in Sources */,
+				DBEC641C92C8C05F1F15C51984AF96CE /* GyroscopeBase.swift in Sources */,
+				10C0334051D33669B043271559A46EF3 /* Hub.swift in Sources */,
+				9B5B4D6CDC13B6A59C67CE4968FE9D7A /* HubBase.swift in Sources */,
+				EA4238BDCEC779B0F8797656BA630C8E /* HumiditySensor.swift in Sources */,
+				D2E2488EF6508D9936CD8B8A40866134 /* HumiditySensorBase.swift in Sources */,
+				4C82E6FD940C2D32EA94A25EB7A8AAF6 /* IR.swift in Sources */,
+				38EADC221ACF95D903BEECEC082ABD7E /* IRBase.swift in Sources */,
+				527A14D6D0BD9C41EE2D0F03589B3E95 /* LCD.swift in Sources */,
+				2D10981DCCA771438E6E52DB29B5A1A7 /* LCDBase.swift in Sources */,
+				2D1A0CE2C083C508C86C9069552E3602 /* LightSensor.swift in Sources */,
+				674B753EB48DAC0CD44A86BA2AEB5EE1 /* LightSensorBase.swift in Sources */,
+				8B5E4D51F6BB5373DDF9B252642E3F08 /* Log.swift in Sources */,
+				52ED6D5EC2A25EC39B21BCF487AC93AF /* LogBase.swift in Sources */,
+				AA95C36ABCA73EBA5116E333592AF31C /* Magnetometer.swift in Sources */,
+				EAD40B82470E4E76FB3436A9C857D729 /* MagnetometerBase.swift in Sources */,
+				CEE843D4D4C1A540F70A62A36B851F36 /* Manager.swift in Sources */,
+				7756FE2B5783FED60ED6AF82BC31C39E /* ManagerBase.swift in Sources */,
+				01A72287B5A2DDA60D57B088E8E372CA /* MotorPositionController.swift in Sources */,
+				668FAE0109F888848AF661317DB50282 /* MotorPositionControllerBase.swift in Sources */,
+				8D396A33AB7071E87266E95465706A2D /* Net.swift in Sources */,
+				800B4C9C55D66587AC1FB86F541F3AC5 /* NetBase.swift in Sources */,
+				0B2D8FA960467FB4FBBEF7D0664C3F90 /* Phidget.swift in Sources */,
+				FE14631051CC17F36D71747FEDE3990D /* Phidget22Swift-dummy.m in Sources */,
+				C80F82AC1D139A676BB13C58DD6D53EA /* PhidgetBase.swift in Sources */,
+				6D91904FF1A1BAA69DDDFC7080E5B926 /* PhidgetError.swift in Sources */,
+				8E1F28D070218BB067B4C1160DCD20B1 /* PHSensor.swift in Sources */,
+				46724B8878AA4421837A61DD15AD51CF /* PHSensorBase.swift in Sources */,
+				15FDE5B5C24F15149A1207992794FB2F /* PowerGuard.swift in Sources */,
+				7E797C70B1D20907186478F4881EBDF2 /* PowerGuardBase.swift in Sources */,
+				F58EA736FE4A9A6AC3249B28869362C8 /* PressureSensor.swift in Sources */,
+				85DAF23CE63C30F9D103EE97D7FD02DE /* PressureSensorBase.swift in Sources */,
+				02BC29BBE52FAD6C00CC8A909EC704CF /* RCServo.swift in Sources */,
+				4B8A280247A015EDDBFF383740E3F769 /* RCServoBase.swift in Sources */,
+				69B0DF8494AB4E1BE980D4DF3B18D5D2 /* ResistanceInput.swift in Sources */,
+				C19C03A01C5C3D8705FA27E0633D8945 /* ResistanceInputBase.swift in Sources */,
+				E56C3A9D95BCBF2913DE85483CECB833 /* RFID.swift in Sources */,
+				B594507018D182F5D30E2367F77D9707 /* RFIDBase.swift in Sources */,
+				85A51D29A0DA35095433740FAA4A14B0 /* SoundSensor.swift in Sources */,
+				78C36831C16E39EAAF577D23BD868179 /* SoundSensorBase.swift in Sources */,
+				B54586968C34A5150DF905A423261CF5 /* Spatial.swift in Sources */,
+				A973D2E47B6BA1298F7371CE032317A6 /* SpatialBase.swift in Sources */,
+				83BA16D7AD3EFD8E08AE25C4321E78E7 /* Stepper.swift in Sources */,
+				5DC5B45E4B4F7656A55FE15749BF8BBD /* StepperBase.swift in Sources */,
+				E17E258BDA6ABF27964041803E677C48 /* TemperatureSensor.swift in Sources */,
+				2590EEF8EBC3B0D3A11BC5C7499F71B7 /* TemperatureSensorBase.swift in Sources */,
+				0ED4A36144A52EAEB7158DA62BF0120D /* Types.swift in Sources */,
+				C6C7997B3F3A9ED652FA71B9A172CA25 /* VoltageInput.swift in Sources */,
+				D66F7F1166415E47B5AC9D5E6B341F33 /* VoltageInputBase.swift in Sources */,
+				E5890B6033D14A0438CB67D81C2FA7E7 /* VoltageOutput.swift in Sources */,
+				59B60BB1E12DCE64FDC7DD54BC8EBE4F /* VoltageOutputBase.swift in Sources */,
+				35C9ACFFCB2811EC360C2DCF297B1D35 /* VoltageRatioInput.swift in Sources */,
+				DE65315ADBF2CD597174FAA7CD458E7B /* VoltageRatioInputBase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4784005F61E60AB125F272AD6EC9179 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F03B33A916C8498B4CF9CC778494BBB /* Pods-Phidget_Project-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D35225BA40ECE58401F12444B70415A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Phidget22Swift;
+			target = 55B0D5869F76EB974AF1C4DEBB5E6E07 /* Phidget22Swift */;
+			targetProxy = 8546ABB33CDFE34C814BA8920E6E877E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		40B45BB3CF3EE4476259302A7FAAD78F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		812859A7ACC21407145BE6AC8059B61E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E6CD07B2A867766EC1B2E0777E5878D /* Pods-Phidget_Project.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Phidget_Project/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Phidget_Project/Pods-Phidget_Project.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		85ED3013A635C27F8B7FAF51362B108C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8D10BE62ED195DD25FC2CAF1E0CE24E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADA4723510CA26AC64454CAED7611200 /* Pods-Phidget_Project.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Phidget_Project/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Phidget_Project/Pods-Phidget_Project.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A37FA35CF6FDDEB0E23F02D9B03961DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E227AAE4181917B7A0D03FAB3D4D71A3 /* Phidget22Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Phidget22Swift/Phidget22Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Phidget22Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Phidget22Swift/Phidget22Swift.modulemap";
+				PRODUCT_MODULE_NAME = Phidget22Swift;
+				PRODUCT_NAME = Phidget22Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA208CE4C8CA98DF4305C6441D9B6C81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E227AAE4181917B7A0D03FAB3D4D71A3 /* Phidget22Swift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Phidget22Swift/Phidget22Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Phidget22Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/Phidget22Swift/Phidget22Swift.modulemap";
+				PRODUCT_MODULE_NAME = Phidget22Swift;
+				PRODUCT_NAME = Phidget22Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85ED3013A635C27F8B7FAF51362B108C /* Debug */,
+				40B45BB3CF3EE4476259302A7FAAD78F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9665C42AED62B58402CC522A486DF8A4 /* Build configuration list for PBXNativeTarget "Phidget22Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A37FA35CF6FDDEB0E23F02D9B03961DE /* Debug */,
+				AA208CE4C8CA98DF4305C6441D9B6C81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F181E445DEA243D0D7DADC63CAD2273B /* Build configuration list for PBXNativeTarget "Pods-Phidget_Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				812859A7ACC21407145BE6AC8059B61E /* Debug */,
+				8D10BE62ED195DD25FC2CAF1E0CE24E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
