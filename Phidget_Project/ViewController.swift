@@ -41,7 +41,6 @@ class ViewController: UIViewController {
     
     func state_change0(sender: DigitalInput, state: Bool) {
         do{
-
             if (state == true){
                 print("Button 0 Pressed")
                 try ledArray[0].setState(true)
@@ -59,7 +58,7 @@ class ViewController: UIViewController {
     
     func state_change1(sender: DigitalInput, state: Bool) {
         do{
-            
+
             if (state == true){
                 print("Button 0 Pressed")
                 try ledArray[1].setState(true)
@@ -88,8 +87,9 @@ class ViewController: UIViewController {
                 try buttonArray[i].setDeviceSerialNumber(528057)
                 try buttonArray[i].setHubPort(i)
                 try buttonArray[i].setIsHubPortDevice(true)
-                let _ = buttonArray[i].stateChange.addHandler(state_change0)
-                let _ = buttonArray[i].stateChange.addHandler(state_change1)
+                let _ = buttonArray[0].stateChange.addHandler(state_change0)
+                let _ = buttonArray[1].stateChange.addHandler(state_change1)
+                
                 let _ = buttonArray[i].attach.addHandler(attach_handler)
                 try buttonArray[i].open()
             }
