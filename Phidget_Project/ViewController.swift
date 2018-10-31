@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             }
             else {
                 print("Button 0 Not Pressed")
-                try ledArray[0].setState(false)
+                try ledArray[0].setState(true)
             }
         } catch let err as PhidgetError {
             print("Phidget Error" + err.description)
@@ -61,11 +61,10 @@ class ViewController: UIViewController {
 
             if (state == true){
                 print("Button 0 Pressed")
-                try ledArray[1].setState(true)
-            }
+                try ledArray[1].setState(true)          }
             else {
                 print("Button 0 Not Pressed")
-                try ledArray[1].setState(false)
+                try ledArray[1].setState(true)
             }
         } catch let err as PhidgetError {
             print("Phidget Error" + err.description)
