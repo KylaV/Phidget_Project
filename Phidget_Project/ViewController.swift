@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         }
     }
     
-    func state_change0(sender: DigitalInput, state: Bool) {
+    func state_change0 (sender: DigitalInput, state: Bool) {
         do{
             if (state == true){
                 print("Button 0 Pressed")
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
             }
             else {
                 print("Button 0 Not Pressed")
-                try ledArray[0].setState(true)
+                try ledArray[1].setState(false)
             }
         } catch let err as PhidgetError {
             print("Phidget Error" + err.description)
@@ -56,15 +56,16 @@ class ViewController: UIViewController {
         }
     }
     
-    func state_change1(sender: DigitalInput, state: Bool) {
+    func state_change1 (sender: DigitalInput, state: Bool) {
         do{
 
             if (state == true){
-                print("Button 0 Pressed")
-                try ledArray[1].setState(true)          }
-            else {
-                print("Button 0 Not Pressed")
+                print("Button 1 Pressed")
                 try ledArray[1].setState(true)
+            }
+            else {
+                print("Button 1 Not Pressed")
+                try ledArray[0].setState(false)
             }
         } catch let err as PhidgetError {
             print("Phidget Error" + err.description)
