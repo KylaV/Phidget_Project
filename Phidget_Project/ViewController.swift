@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     
     let ledArray = [DigitalOutput(), DigitalOutput()]
     let buttonArray = [DigitalInput(), DigitalInput()]
+    var redButtonPressed : String = ""
+    
+    @IBOutlet weak var labelOne: UILabel!
     
     func attach_handler(sender: Phidget) {
         do{
@@ -44,6 +47,7 @@ class ViewController: UIViewController {
             if (state == true){
                 print("Button 0 Pressed")
                 try ledArray[0].setState(true)
+                redButton()
             }
             else {
                 print("Button 0 Not Pressed")
@@ -73,9 +77,12 @@ class ViewController: UIViewController {
             //catch other errors here
         }
     }
-
     
-
+    func redButton() {
+        DispatchQueue.main.async {
+            self.labelOne.text = "Red Button Pressed"
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,6 +114,8 @@ class ViewController: UIViewController {
         } catch {
             //catch other errors here
         }
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
