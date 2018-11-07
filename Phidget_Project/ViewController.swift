@@ -14,8 +14,12 @@ class ViewController: UIViewController {
     let ledArray = [DigitalOutput(), DigitalOutput()]
     let buttonArray = [DigitalInput(), DigitalInput()]
     var redButtonPressed : String = ""
+    var rCount : Int = 0
+    var gCount : Int = 0
     
     @IBOutlet weak var labelOne: UILabel!
+    @IBOutlet weak var redButtonCount: UILabel!
+    @IBOutlet weak var greenButtonCount: UILabel!
     
     func attach_handler(sender: Phidget) {
         do{
@@ -48,6 +52,8 @@ class ViewController: UIViewController {
                 print("Button 0 Pressed")
                 try ledArray[0].setState(true)
                 redButton()
+                redCount()
+                rCount = rCount + 1
             }
             else {
                 print("Button 0 Not Pressed")
@@ -66,6 +72,9 @@ class ViewController: UIViewController {
             if (state == true){
                 print("Button 1 Pressed")
                 try ledArray[1].setState(true)
+                greenButton()
+                greenCount()
+                gCount = gCount + 1
             }
             else {
                 print("Button 1 Not Pressed")
@@ -84,6 +93,24 @@ class ViewController: UIViewController {
         }
     }
 
+    func redCount() {
+        DispatchQueue.main.async {
+            self.redButtonCount.text = "Red Button Pressed \(self.rCount)"
+        }
+    }
+
+    func greenCount() {
+        DispatchQueue.main.async {
+            self.greenButtonCount.text = "Green Button Pressed \(self.gCount)"
+        }
+    }
+
+    func greenButton() {
+        DispatchQueue.main.async {
+            self.labelOne.text = "Green Button Pressed"
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         do{
@@ -94,9 +121,6 @@ class ViewController: UIViewController {
                 try buttonArray[i].setDeviceSerialNumber(528057)
                 try buttonArray[i].setHubPort(i)
                 try buttonArray[i].setIsHubPortDevice(true)
-                let _ = buttonArray[0].stateChange.addHandler(state_change0)
-                let _ = buttonArray[1].stateChange.addHandler(state_change1)
-                
                 let _ = buttonArray[i].attach.addHandler(attach_handler)
                 try buttonArray[i].open()
             }
@@ -108,6 +132,9 @@ class ViewController: UIViewController {
                 let _ = ledArray[i].attach.addHandler(attach_handler)
                 try ledArray[i].open()
             }
+            
+            let _ = buttonArray[0].stateChange.addHandler(state_change0)
+            let _ = buttonArray[1].stateChange.addHandler(state_change1)
             
         } catch let err as PhidgetError {
             print("Phidget Error" + err.description)
