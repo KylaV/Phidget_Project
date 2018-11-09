@@ -17,7 +17,11 @@ class ViewController: UIViewController {
     var rCount : Int = 0
     var gCount : Int = 0
     var buttonAlreadyPressed : Bool = true
+    var pickedAnswer: Bool = false
+    var questionNumber: Int = 0
+    let allQuestions = QuestionBank()
     
+    @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var labelOne: UILabel!
     @IBOutlet weak var redButtonCount: UILabel!
     @IBOutlet weak var greenButtonCount: UILabel!
@@ -58,6 +62,7 @@ class ViewController: UIViewController {
                     buttonAlreadyPressed = false
                     try ledArray[0].setState(true)
                     try ledArray[1].setState(false)
+                    
                 }
                 redButton()
                 redCount()
@@ -97,33 +102,71 @@ class ViewController: UIViewController {
             //catch other errors here
         }
     }
-    
-//    func nextQuestion() {
-//        
-//    }
-    
+
     //Changes the labels on mainviewcontroller
     func redButton() {
         DispatchQueue.main.async {
-            self.labelOne.text = "Red Button Pressed"
+            self.labelOne.text = "First Player Pressed"
         }
     }
     
     func greenButton() {
         DispatchQueue.main.async {
-            self.labelOne.text = "Green Button Pressed"
+            self.labelOne.text = "Second Player Pressed"
         }
     }
 
     func greenCount() {
         DispatchQueue.main.async {
-            self.greenButtonCount.text = "Green Button Pressed \(self.gCount)"
+            self.greenButtonCount.text = "\(self.gCount)/13"
         }
     }
     
     func redCount() {
         DispatchQueue.main.async {
-            self.redButtonCount.text = "Red Button Pressed \(self.rCount)"
+            self.redButtonCount.text = "\(self.rCount)/13"
+        }
+    }
+    
+    //Questions
+    func nextQuestion() {
+        if questionNumber <= 12 {
+            questionLabel.text = allQuestions.list[questionNumber].questionText
+        }
+        else {
+            print("No More Questions :)")
+        }
+    }
+    
+    func playerAnswered(sender: Phidget) {
+        do {
+            let hubPort = try sender.getHubPort()
+            if (hubPort == 1) {
+                pickedAnswer = true
+            }
+            else if (hubPort == 0) {
+                pickedAnswer = false
+            }
+            
+            checkAnswer()
+            questionNumber = questionNumber + 1
+            nextQuestion()
+            
+        } catch let err as PhidgetError {
+            print("Phidget Error" + err.description)
+        } catch {
+            //catch other errors here
+        }
+    }
+    
+    func checkAnswer() {
+        let correctAnswer = allQuestions.list[questionNumber].answer
+        
+        if correctAnswer == pickedAnswer {
+            print("Correct")
+        }
+        else {
+            print("Incorrect")
         }
     }
 
@@ -151,6 +194,8 @@ class ViewController: UIViewController {
             //state change of buttons
             let _ = buttonArray[0].stateChange.addHandler(state_change0)
             let _ = buttonArray[1].stateChange.addHandler(state_change1)
+            
+            nextQuestion()
             
         } catch let err as PhidgetError {
             print("Phidget Error" + err.description)
