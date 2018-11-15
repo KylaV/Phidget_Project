@@ -56,19 +56,21 @@ class ViewController: UIViewController {
     func state_change0 (sender: DigitalInput, state: Bool) {
         do{
             if (state == true){
+               
                 if (buttonAlreadyPressed == true) {
                     print("Button 0 Pressed")
                     print("player one pressed")
                     buttonAlreadyPressed = false
                     try ledArray[0].setState(true)
-                    try ledArray[1].setState(false)
                     redButton()
                 }
-               
-                questionAnswered()
-                redCount()
-                nextQuestion()
+                else {
+                    questionAnswered()
+                    redCount()
+                    nextQuestion()
+                }
             }
+           
             else {
                 print("Button 0 Not Pressed")
             }
@@ -84,18 +86,22 @@ class ViewController: UIViewController {
         do{
 
             if (state == true){
+               
                 if (buttonAlreadyPressed == true) {
-                print("Button 1 Pressed")
+                print("Green Button Pressed")
                 buttonAlreadyPressed = false
                 try ledArray[1].setState(true)
-                try ledArray[0].setState(false)
                 greenButton()
                 }
-                greenCount()
-                nextQuestion()
-            }
+                else {
+                    questionAnswered()
+                    greenCount()
+                    nextQuestion()
+                }
+           }
+                
             else {
-                print("Button 1 Not Pressed")
+                print("Green Button Released")
             }
         } catch let err as PhidgetError {
             print("Phidget Error" + err.description)
@@ -117,59 +123,12 @@ class ViewController: UIViewController {
     }
     func greenCount() {
         DispatchQueue.main.async {
-            self.greenButtonCount.text = "\(self.gCount)/13"
+            self.greenButtonCount.text = "Player 2 Score \(self.gCount)"
         }
     }
     func redCount() {
         DispatchQueue.main.async {
-            self.redButtonCount.text = "\(self.rCount)/13"
-        }
-    }
-    
-    //Questions
-    func nextQuestion() {
-        if questionNumber <= 12 {
-            DispatchQueue.main.async {
-             self.questionLabel.text = self.allQuestions.list[self.questionNumber].questionText
-            }
-        }
-        else {
-            print("No More Questions :)")
-        }
-    }
-    
-    func questionAnswered() {
-        func playerAnswered(sender: Phidget) {
-            do {
-                let hubPort = try sender.getHubPort()
-                if (hubPort == 1) {
-                    pickedAnswer = true
-                }
-                else if (hubPort == 0) {
-                    pickedAnswer = false
-                }
-            
-                checkAnswer()
-                questionNumber = questionNumber + 1
-                nextQuestion()
-            
-            } catch let err as PhidgetError {
-                print("Phidget Error" + err.description)
-            } catch {
-            //catch other errors here
-            }
-        }
-    }
-    func checkAnswer() {
-        let correctAnswer = allQuestions.list[questionNumber].answer
-        
-        if correctAnswer == pickedAnswer {
-            print("Correct")
-            rCount = rCount + 1
-            gCount = gCount + 1
-        }
-        else {
-            print("Incorrect")
+            self.redButtonCount.text = "Player 1 Score \(self.rCount)"
         }
     }
     
@@ -208,5 +167,56 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    //Questions
+    func nextQuestion() {
+        if questionNumber <= 12 {
+            DispatchQueue.main.async {
+                self.questionLabel.text = self.allQuestions.list[self.questionNumber].questionText
+            }
+        }
+        else {
+            print("No More Questions :)")
+        }
+    }
+    
+    func questionAnswered() {
+        func playerAnswered(sender: Phidget) {
+            do {
+                let hubPort = try sender.getHubPort()
+                if (hubPort == 1) {
+                    pickedAnswer = true
+                }
+                else if (hubPort == 0) {
+                    pickedAnswer = false
+                }
+                
+                checkAnswer()
+                questionNumber = questionNumber + 1
+                nextQuestion()
+                
+            } catch let err as PhidgetError {
+                print("Phidget Error" + err.description)
+            } catch {
+                //catch other errors here
+            }
+        }
+    }
+    func checkAnswer() {
+        let correctAnswer = allQuestions.list[questionNumber].answer
+        
+        if correctAnswer == pickedAnswer {
+            print("Correct")
+        }
+        else {
+            print("Incorrect")
+        }
+    }
+    
+    func startOver () {
+        questionNumber = 0
+        nextQuestion()
+    }
+    
 }
 
